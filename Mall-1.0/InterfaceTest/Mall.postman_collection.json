@@ -1,14 +1,12 @@
 {
 	"info": {
+		"_postman_id": "6e9421db-dcec-44cf-94d2-18c0e5274b22",
 		"name": "Mall",
-		"_postman_id": "878cec5c-44fa-40f5-9f01-786404a9caff",
-		"description": "",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
 		{
 			"name": "门户_用户接口",
-			"description": null,
 			"item": [
 				{
 					"name": "登录",
@@ -26,13 +24,11 @@
 								{
 									"key": "username",
 									"value": "admin",
-									"description": "",
 									"type": "text"
 								},
 								{
 									"key": "password",
 									"value": "admin",
-									"description": "",
 									"type": "text"
 								}
 							]
@@ -46,8 +42,7 @@
 								"user",
 								"login.do"
 							]
-						},
-						"description": ""
+						}
 					},
 					"response": []
 				},
@@ -56,7 +51,6 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"body": {},
 						"url": {
 							"raw": "{{host}}/user/register.do?username=maoxin&password=maoxin&email=maoxin@maoxin.com&phone=13813131313&question=no&answer=yes",
 							"host": [
@@ -69,37 +63,30 @@
 							"query": [
 								{
 									"key": "username",
-									"value": "maoxin",
-									"equals": true
+									"value": "maoxin"
 								},
 								{
 									"key": "password",
-									"value": "maoxin",
-									"equals": true
+									"value": "maoxin"
 								},
 								{
 									"key": "email",
-									"value": "maoxin@maoxin.com",
-									"equals": true
+									"value": "maoxin@maoxin.com"
 								},
 								{
 									"key": "phone",
-									"value": "13813131313",
-									"equals": true
+									"value": "13813131313"
 								},
 								{
 									"key": "question",
-									"value": "no",
-									"equals": true
+									"value": "no"
 								},
 								{
 									"key": "answer",
-									"value": "yes",
-									"equals": true
+									"value": "yes"
 								}
 							]
-						},
-						"description": ""
+						}
 					},
 					"response": []
 				},
@@ -108,7 +95,6 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"body": {},
 						"url": {
 							"raw": "{{host}}/user/check_valid.do?str=admin&type=username",
 							"host": [
@@ -121,17 +107,14 @@
 							"query": [
 								{
 									"key": "str",
-									"value": "admin",
-									"equals": true
+									"value": "admin"
 								},
 								{
 									"key": "type",
-									"value": "username",
-									"equals": true
+									"value": "username"
 								}
 							]
-						},
-						"description": ""
+						}
 					},
 					"response": []
 				},
@@ -140,7 +123,6 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"body": {},
 						"url": {
 							"raw": "{{host}}/user/get_user_info.do",
 							"host": [
@@ -150,8 +132,7 @@
 								"user",
 								"get_user_info.do"
 							]
-						},
-						"description": ""
+						}
 					},
 					"response": []
 				},
@@ -160,7 +141,6 @@
 					"request": {
 						"method": "POST",
 						"header": [],
-						"body": {},
 						"url": {
 							"raw": "{{host}}/user/forget_get_question.do?username=admin",
 							"host": [
@@ -173,12 +153,10 @@
 							"query": [
 								{
 									"key": "username",
-									"value": "admin",
-									"equals": true
+									"value": "admin"
 								}
 							]
-						},
-						"description": ""
+						}
 					},
 					"response": []
 				},
@@ -187,7 +165,6 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"body": {},
 						"url": {
 							"raw": "{{host}}/user/forget_check_answer.do?username=admin&question=问题&answer=答案",
 							"host": [
@@ -200,22 +177,18 @@
 							"query": [
 								{
 									"key": "username",
-									"value": "admin",
-									"equals": true
+									"value": "admin"
 								},
 								{
 									"key": "question",
-									"value": "问题",
-									"equals": true
+									"value": "问题"
 								},
 								{
 									"key": "answer",
-									"value": "答案",
-									"equals": true
+									"value": "答案"
 								}
 							]
-						},
-						"description": ""
+						}
 					},
 					"response": []
 				},
@@ -224,7 +197,6 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"body": {},
 						"url": {
 							"raw": "{{host}}/user/forget_reset_password.do?username=admin&passwordNew=admin&forgetToken=5fc15fda-cd10-4240-8504-09543bfa74e1",
 							"host": [
@@ -237,22 +209,18 @@
 							"query": [
 								{
 									"key": "username",
-									"value": "admin",
-									"equals": true
+									"value": "admin"
 								},
 								{
 									"key": "passwordNew",
-									"value": "admin",
-									"equals": true
+									"value": "admin"
 								},
 								{
 									"key": "forgetToken",
-									"value": "5fc15fda-cd10-4240-8504-09543bfa74e1",
-									"equals": true
+									"value": "5fc15fda-cd10-4240-8504-09543bfa74e1"
 								}
 							]
-						},
-						"description": ""
+						}
 					},
 					"response": []
 				},
@@ -261,7 +229,6 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"body": {},
 						"url": {
 							"raw": "{{host}}/user/reset_password.do?oldPassword=admin&newPassword=admin",
 							"host": [
@@ -274,17 +241,14 @@
 							"query": [
 								{
 									"key": "oldPassword",
-									"value": "admin",
-									"equals": true
+									"value": "admin"
 								},
 								{
 									"key": "newPassword",
-									"value": "admin",
-									"equals": true
+									"value": "admin"
 								}
 							]
-						},
-						"description": ""
+						}
 					},
 					"response": []
 				},
@@ -293,7 +257,6 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"body": {},
 						"url": {
 							"raw": "{{host}}/user/update_information.do?email=maoxin@aliyun.com&phone=12212121&question=Question&answer=Answer",
 							"host": [
@@ -306,27 +269,22 @@
 							"query": [
 								{
 									"key": "email",
-									"value": "maoxin@aliyun.com",
-									"equals": true
+									"value": "maoxin@aliyun.com"
 								},
 								{
 									"key": "phone",
-									"value": "12212121",
-									"equals": true
+									"value": "12212121"
 								},
 								{
 									"key": "question",
-									"value": "Question",
-									"equals": true
+									"value": "Question"
 								},
 								{
 									"key": "answer",
-									"value": "Answer",
-									"equals": true
+									"value": "Answer"
 								}
 							]
-						},
-						"description": ""
+						}
 					},
 					"response": []
 				},
@@ -335,7 +293,6 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"body": {},
 						"url": {
 							"raw": "{{host}}/user/get_information.do",
 							"host": [
@@ -345,8 +302,7 @@
 								"user",
 								"get_information.do"
 							]
-						},
-						"description": ""
+						}
 					},
 					"response": []
 				},
@@ -355,7 +311,6 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"body": {},
 						"url": {
 							"raw": "{{host}}/user/logout.do",
 							"host": [
@@ -365,8 +320,7 @@
 								"user",
 								"logout.do"
 							]
-						},
-						"description": ""
+						}
 					},
 					"response": []
 				}
@@ -374,14 +328,12 @@
 		},
 		{
 			"name": "门户-产品接口",
-			"description": "",
 			"item": [
 				{
 					"name": "产品搜索及动态排序List",
 					"request": {
 						"method": "GET",
 						"header": [],
-						"body": {},
 						"url": {
 							"raw": "{{host}}/product/list.do?pageNum=1&pageSize=1&keyword=&categoryId=100001",
 							"host": [
@@ -394,33 +346,27 @@
 							"query": [
 								{
 									"key": "pageNum",
-									"value": "1",
-									"equals": true
+									"value": "1"
 								},
 								{
 									"key": "pageSize",
-									"value": "1",
-									"equals": true
+									"value": "1"
 								},
 								{
 									"key": "orderBy",
-									"value": "",
-									"equals": false,
+									"value": null,
 									"disabled": true
 								},
 								{
 									"key": "keyword",
-									"value": "",
-									"equals": true
+									"value": ""
 								},
 								{
 									"key": "categoryId",
-									"value": "100001",
-									"equals": true
+									"value": "100001"
 								}
 							]
-						},
-						"description": ""
+						}
 					},
 					"response": []
 				},
@@ -429,7 +375,6 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"body": {},
 						"url": {
 							"raw": "{{host}}/product/detail.do?productId=26",
 							"host": [
@@ -442,12 +387,10 @@
 							"query": [
 								{
 									"key": "productId",
-									"value": "26",
-									"equals": true
+									"value": "26"
 								}
 							]
-						},
-						"description": ""
+						}
 					},
 					"response": []
 				}
@@ -455,14 +398,12 @@
 		},
 		{
 			"name": "门户-购物车接口",
-			"description": "",
 			"item": [
 				{
 					"name": "购物车List列表",
 					"request": {
 						"method": "GET",
 						"header": [],
-						"body": {},
 						"url": {
 							"raw": "{{host}}/cart/list.do",
 							"host": [
@@ -472,8 +413,7 @@
 								"cart",
 								"list.do"
 							]
-						},
-						"description": ""
+						}
 					},
 					"response": []
 				},
@@ -482,7 +422,6 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"body": {},
 						"url": {
 							"raw": "{{host}}/cart/add.do?productId=27&count=1",
 							"host": [
@@ -495,17 +434,14 @@
 							"query": [
 								{
 									"key": "productId",
-									"value": "27",
-									"equals": true
+									"value": "27"
 								},
 								{
 									"key": "count",
-									"value": "1",
-									"equals": true
+									"value": "1"
 								}
 							]
-						},
-						"description": ""
+						}
 					},
 					"response": []
 				},
@@ -514,7 +450,6 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"body": {},
 						"url": {
 							"raw": "{{host}}/cart/update.do?productId=27&count=1",
 							"host": [
@@ -527,17 +462,14 @@
 							"query": [
 								{
 									"key": "productId",
-									"value": "27",
-									"equals": true
+									"value": "27"
 								},
 								{
 									"key": "count",
-									"value": "1",
-									"equals": true
+									"value": "1"
 								}
 							]
-						},
-						"description": ""
+						}
 					},
 					"response": []
 				},
@@ -546,7 +478,6 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"body": {},
 						"url": {
 							"raw": "{{host}}/cart/delete_product.do?productIds=26",
 							"host": [
@@ -559,12 +490,10 @@
 							"query": [
 								{
 									"key": "productIds",
-									"value": "26",
-									"equals": true
+									"value": "26"
 								}
 							]
-						},
-						"description": ""
+						}
 					},
 					"response": []
 				},
@@ -573,7 +502,6 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"body": {},
 						"url": {
 							"raw": "{{host}}/cart/select.do?productId=27",
 							"host": [
@@ -586,12 +514,10 @@
 							"query": [
 								{
 									"key": "productId",
-									"value": "27",
-									"equals": true
+									"value": "27"
 								}
 							]
-						},
-						"description": ""
+						}
 					},
 					"response": []
 				},
@@ -600,7 +526,6 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"body": {},
 						"url": {
 							"raw": "{{host}}/cart/un_select.do?productId=27",
 							"host": [
@@ -613,12 +538,10 @@
 							"query": [
 								{
 									"key": "productId",
-									"value": "27",
-									"equals": true
+									"value": "27"
 								}
 							]
-						},
-						"description": ""
+						}
 					},
 					"response": []
 				},
@@ -627,7 +550,6 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"body": {},
 						"url": {
 							"raw": "{{host}}/cart/get_cart_product_count.do",
 							"host": [
@@ -637,8 +559,7 @@
 								"cart",
 								"get_cart_product_count.do"
 							]
-						},
-						"description": ""
+						}
 					},
 					"response": []
 				},
@@ -647,7 +568,6 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"body": {},
 						"url": {
 							"raw": "{{host}}/cart/select_all.do",
 							"host": [
@@ -657,8 +577,7 @@
 								"cart",
 								"select_all.do"
 							]
-						},
-						"description": ""
+						}
 					},
 					"response": []
 				},
@@ -667,7 +586,6 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"body": {},
 						"url": {
 							"raw": "{{host}}/cart/un_select_all.do",
 							"host": [
@@ -677,8 +595,7 @@
 								"cart",
 								"un_select_all.do"
 							]
-						},
-						"description": ""
+						}
 					},
 					"response": []
 				}
@@ -686,14 +603,12 @@
 		},
 		{
 			"name": "门户-订单接口",
-			"description": "",
 			"item": [
 				{
 					"name": "创建订单",
 					"request": {
 						"method": "GET",
 						"header": [],
-						"body": {},
 						"url": {
 							"raw": "{{host}}/order/create.do?shippingId=29",
 							"host": [
@@ -706,12 +621,10 @@
 							"query": [
 								{
 									"key": "shippingId",
-									"value": "29",
-									"equals": true
+									"value": "29"
 								}
 							]
-						},
-						"description": ""
+						}
 					},
 					"response": []
 				},
@@ -720,7 +633,6 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"body": {},
 						"url": {
 							"raw": "{{host}}/order/get_order_cart_product.do",
 							"host": [
@@ -730,8 +642,7 @@
 								"order",
 								"get_order_cart_product.do"
 							]
-						},
-						"description": ""
+						}
 					},
 					"response": []
 				},
@@ -740,7 +651,6 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"body": {},
 						"url": {
 							"raw": "{{host}}/order/list.do?pageSize=2&pageNum=1",
 							"host": [
@@ -753,17 +663,14 @@
 							"query": [
 								{
 									"key": "pageSize",
-									"value": "2",
-									"equals": true
+									"value": "2"
 								},
 								{
 									"key": "pageNum",
-									"value": "1",
-									"equals": true
+									"value": "1"
 								}
 							]
-						},
-						"description": ""
+						}
 					},
 					"response": []
 				},
@@ -772,7 +679,6 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"body": {},
 						"url": {
 							"raw": "{{host}}/order/detail.do?orderNo=1558191391465",
 							"host": [
@@ -785,12 +691,10 @@
 							"query": [
 								{
 									"key": "orderNo",
-									"value": "1558191391465",
-									"equals": true
+									"value": "1558191391465"
 								}
 							]
-						},
-						"description": ""
+						}
 					},
 					"response": []
 				},
@@ -799,7 +703,6 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"body": {},
 						"url": {
 							"raw": "{{host}}/order/cancel.do?orderNo=1558191391465",
 							"host": [
@@ -812,12 +715,10 @@
 							"query": [
 								{
 									"key": "orderNo",
-									"value": "1558191391465",
-									"equals": true
+									"value": "1558191391465"
 								}
 							]
-						},
-						"description": ""
+						}
 					},
 					"response": []
 				}
@@ -825,14 +726,12 @@
 		},
 		{
 			"name": "门户-收货地址接口",
-			"description": "",
 			"item": [
 				{
 					"name": "添加地址",
 					"request": {
 						"method": "GET",
 						"header": [],
-						"body": {},
 						"url": {
 							"raw": "{{host}}/shipping/add.do?userId&receiverName=Maoxin&receiverPhone=13131&receiverMobile=4612124&receiverProvince=天津&receiverCity=西青区&receiverAddress=大学城&receiverZip=100000&receiverDis",
 							"host": [
@@ -845,52 +744,42 @@
 							"query": [
 								{
 									"key": "userId",
-									"value": "",
-									"equals": false
+									"value": null
 								},
 								{
 									"key": "receiverName",
-									"value": "Maoxin",
-									"equals": true
+									"value": "Maoxin"
 								},
 								{
 									"key": "receiverPhone",
-									"value": "13131",
-									"equals": true
+									"value": "13131"
 								},
 								{
 									"key": "receiverMobile",
-									"value": "4612124",
-									"equals": true
+									"value": "4612124"
 								},
 								{
 									"key": "receiverProvince",
-									"value": "天津",
-									"equals": true
+									"value": "天津"
 								},
 								{
 									"key": "receiverCity",
-									"value": "西青区",
-									"equals": true
+									"value": "西青区"
 								},
 								{
 									"key": "receiverAddress",
-									"value": "大学城",
-									"equals": true
+									"value": "大学城"
 								},
 								{
 									"key": "receiverZip",
-									"value": "100000",
-									"equals": true
+									"value": "100000"
 								},
 								{
 									"key": "receiverDis",
-									"value": "",
-									"equals": false
+									"value": null
 								}
 							]
-						},
-						"description": ""
+						}
 					},
 					"response": []
 				},
@@ -899,7 +788,6 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"body": {},
 						"url": {
 							"raw": "{{host}}/shipping/del.do?shippingId=30",
 							"host": [
@@ -912,12 +800,10 @@
 							"query": [
 								{
 									"key": "shippingId",
-									"value": "30",
-									"equals": true
+									"value": "30"
 								}
 							]
-						},
-						"description": ""
+						}
 					},
 					"response": []
 				},
@@ -926,7 +812,6 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"body": {},
 						"url": {
 							"raw": "{{host}}/shipping/update.do?id=29&receiverName=Maoxin&receiverPhone=131313&receiverMobile=13820926666&receiverProvince=天津&receiverCity=天津&receiverAddress=西青区大学城&receiverZip=100000",
 							"host": [
@@ -939,47 +824,38 @@
 							"query": [
 								{
 									"key": "id",
-									"value": "29",
-									"equals": true
+									"value": "29"
 								},
 								{
 									"key": "receiverName",
-									"value": "Maoxin",
-									"equals": true
+									"value": "Maoxin"
 								},
 								{
 									"key": "receiverPhone",
-									"value": "131313",
-									"equals": true
+									"value": "131313"
 								},
 								{
 									"key": "receiverMobile",
-									"value": "13820926666",
-									"equals": true
+									"value": "13820926666"
 								},
 								{
 									"key": "receiverProvince",
-									"value": "天津",
-									"equals": true
+									"value": "天津"
 								},
 								{
 									"key": "receiverCity",
-									"value": "天津",
-									"equals": true
+									"value": "天津"
 								},
 								{
 									"key": "receiverAddress",
-									"value": "西青区大学城",
-									"equals": true
+									"value": "西青区大学城"
 								},
 								{
 									"key": "receiverZip",
-									"value": "100000",
-									"equals": true
+									"value": "100000"
 								}
 							]
-						},
-						"description": ""
+						}
 					},
 					"response": []
 				},
@@ -988,7 +864,6 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"body": {},
 						"url": {
 							"raw": "{{host}}shipping/select.do?shippingId=29",
 							"host": [
@@ -1000,12 +875,10 @@
 							"query": [
 								{
 									"key": "shippingId",
-									"value": "29",
-									"equals": true
+									"value": "29"
 								}
 							]
-						},
-						"description": ""
+						}
 					},
 					"response": []
 				},
@@ -1014,7 +887,6 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"body": {},
 						"url": {
 							"raw": "{{host}}/shipping/list.do",
 							"host": [
@@ -1024,8 +896,7 @@
 								"shipping",
 								"list.do"
 							]
-						},
-						"description": ""
+						}
 					},
 					"response": []
 				}
@@ -1033,14 +904,12 @@
 		},
 		{
 			"name": "门户-支付接口",
-			"description": "",
 			"item": [
 				{
 					"name": "支付请求",
 					"request": {
 						"method": "GET",
 						"header": [],
-						"body": {},
 						"url": {
 							"raw": "{{host}}/order/pay.do?orderNo=1558191391465",
 							"host": [
@@ -1053,12 +922,10 @@
 							"query": [
 								{
 									"key": "orderNo",
-									"value": "1558191391465",
-									"equals": true
+									"value": "1558191391465"
 								}
 							]
-						},
-						"description": ""
+						}
 					},
 					"response": []
 				},
@@ -1067,7 +934,6 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"body": {},
 						"url": {
 							"raw": "{{host}}/order/query_order_pay_status.do?orderNo=1558190787045",
 							"host": [
@@ -1080,12 +946,10 @@
 							"query": [
 								{
 									"key": "orderNo",
-									"value": "1558190787045",
-									"equals": true
+									"value": "1558190787045"
 								}
 							]
-						},
-						"description": ""
+						}
 					},
 					"response": []
 				},
@@ -1094,7 +958,6 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"body": {},
 						"url": {
 							"raw": "{{host}}/order/alipay_callback.do",
 							"host": [
@@ -1104,8 +967,7 @@
 								"order",
 								"alipay_callback.do"
 							]
-						},
-						"description": ""
+						}
 					},
 					"response": []
 				}
@@ -1113,14 +975,12 @@
 		},
 		{
 			"name": "后台-产品接口",
-			"description": "",
 			"item": [
 				{
 					"name": "获取产品List",
 					"request": {
 						"method": "GET",
 						"header": [],
-						"body": {},
 						"url": {
 							"raw": "{{host}}/manage/product/list.do",
 							"host": [
@@ -1131,8 +991,7 @@
 								"product",
 								"list.do"
 							]
-						},
-						"description": ""
+						}
 					},
 					"response": []
 				},
@@ -1141,7 +1000,6 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"body": {},
 						"url": {
 							"raw": "{{host}}/manage/product/search.do?productName=Apple",
 							"host": [
@@ -1155,8 +1013,7 @@
 							"query": [
 								{
 									"key": "productName",
-									"value": "Apple",
-									"equals": true
+									"value": "Apple"
 								}
 							]
 						},
@@ -1175,7 +1032,6 @@
 								{
 									"key": "upload_file",
 									"value": "",
-									"description": "",
 									"type": "file"
 								}
 							]
@@ -1190,8 +1046,7 @@
 								"product",
 								"upload.do"
 							]
-						},
-						"description": ""
+						}
 					},
 					"response": []
 				},
@@ -1200,7 +1055,6 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"body": {},
 						"url": {
 							"raw": "{{host}}/manage/product/detail.do?productId=26",
 							"host": [
@@ -1214,12 +1068,10 @@
 							"query": [
 								{
 									"key": "productId",
-									"value": "26",
-									"equals": true
+									"value": "26"
 								}
 							]
-						},
-						"description": ""
+						}
 					},
 					"response": []
 				},
@@ -1228,7 +1080,6 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"body": {},
 						"url": {
 							"raw": "{{host}}/manage/product/set_sale_status.do?productId=26&status=1",
 							"host": [
@@ -1242,13 +1093,11 @@
 							"query": [
 								{
 									"key": "productId",
-									"value": "26",
-									"equals": true
+									"value": "26"
 								},
 								{
 									"key": "status",
-									"value": "1",
-									"equals": true
+									"value": "1"
 								}
 							]
 						},
@@ -1267,7 +1116,6 @@
 								{
 									"key": "upload_file",
 									"value": "",
-									"description": "",
 									"type": "file"
 								}
 							]
@@ -1282,8 +1130,7 @@
 								"product",
 								"richtext_img_upload.do"
 							]
-						},
-						"description": ""
+						}
 					},
 					"response": []
 				},
@@ -1292,7 +1139,6 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"body": {},
 						"url": {
 							"raw": "{{host}}/manage/product/save.do?categoryId=1&name=三星洗衣机&subtitle=三星大促销&mainImage=561966c7-467b-4f53-acd3-12f175aa30f9.png&subImages=561966c7-467b-4f53-acd3-12f175aa30f9.png&detail=这就是一个简单的测试商品&price=1000&stock=100&status=1",
 							"host": [
@@ -1306,53 +1152,43 @@
 							"query": [
 								{
 									"key": "categoryId",
-									"value": "1",
-									"equals": true
+									"value": "1"
 								},
 								{
 									"key": "name",
-									"value": "三星洗衣机",
-									"equals": true
+									"value": "三星洗衣机"
 								},
 								{
 									"key": "subtitle",
-									"value": "三星大促销",
-									"equals": true
+									"value": "三星大促销"
 								},
 								{
 									"key": "mainImage",
-									"value": "561966c7-467b-4f53-acd3-12f175aa30f9.png",
-									"equals": true
+									"value": "561966c7-467b-4f53-acd3-12f175aa30f9.png"
 								},
 								{
 									"key": "subImages",
-									"value": "561966c7-467b-4f53-acd3-12f175aa30f9.png",
-									"equals": true
+									"value": "561966c7-467b-4f53-acd3-12f175aa30f9.png"
 								},
 								{
 									"key": "detail",
-									"value": "这就是一个简单的测试商品",
-									"equals": true
+									"value": "这就是一个简单的测试商品"
 								},
 								{
 									"key": "price",
-									"value": "1000",
-									"equals": true
+									"value": "1000"
 								},
 								{
 									"key": "stock",
-									"value": "100",
-									"equals": true
+									"value": "100"
 								},
 								{
 									"key": "status",
-									"value": "1",
-									"equals": true
+									"value": "1"
 								},
 								{
 									"key": "id",
 									"value": "3",
-									"equals": true,
 									"disabled": true
 								}
 							]
@@ -1365,19 +1201,66 @@
 		},
 		{
 			"name": "后台-统计接口",
-			"description": "",
-			"item": []
+			"item": [
+				{
+					"name": "查询收入",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/manage/statistics/searchincome.do",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"manage",
+								"statistics",
+								"searchincome.do"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "查询用户总量",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "统计库存",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/manage/statistics/searchstock.do?",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"manage",
+								"statistics",
+								"searchstock.do"
+							]
+						}
+					},
+					"response": []
+				}
+			]
 		},
 		{
 			"name": "后台-用户接口",
-			"description": "",
 			"item": [
 				{
 					"name": "管理员登录",
 					"request": {
 						"method": "POST",
 						"header": [],
-						"body": {},
 						"url": {
 							"raw": "{{host}}/manage/user/login.do?username=admin&password=admin",
 							"host": [
@@ -1391,17 +1274,14 @@
 							"query": [
 								{
 									"key": "username",
-									"value": "admin",
-									"equals": true
+									"value": "admin"
 								},
 								{
 									"key": "password",
-									"value": "admin",
-									"equals": true
+									"value": "admin"
 								}
 							]
-						},
-						"description": ""
+						}
 					},
 					"response": []
 				},
@@ -1410,7 +1290,6 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"body": {},
 						"url": {
 							"raw": "{{host}}manage/user/list.do",
 							"host": [
@@ -1420,8 +1299,7 @@
 								"user",
 								"list.do"
 							]
-						},
-						"description": ""
+						}
 					},
 					"response": []
 				}
@@ -1429,14 +1307,12 @@
 		},
 		{
 			"name": "后台-产品类别接口",
-			"description": "",
 			"item": [
 				{
 					"name": "获取品类子节点",
 					"request": {
 						"method": "GET",
 						"header": [],
-						"body": {},
 						"url": {
 							"raw": "{{host}}/manage/category/get_category.do",
 							"host": [
@@ -1447,8 +1323,7 @@
 								"category",
 								"get_category.do"
 							]
-						},
-						"description": ""
+						}
 					},
 					"response": []
 				},
@@ -1457,7 +1332,6 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"body": {},
 						"url": {
 							"raw": "{{host}}/manage/category/add_category.do?parentId=100001&categoryName=平板电脑",
 							"host": [
@@ -1471,17 +1345,14 @@
 							"query": [
 								{
 									"key": "parentId",
-									"value": "100001",
-									"equals": true
+									"value": "100001"
 								},
 								{
 									"key": "categoryName",
-									"value": "平板电脑",
-									"equals": true
+									"value": "平板电脑"
 								}
 							]
-						},
-						"description": ""
+						}
 					},
 					"response": []
 				},
@@ -1490,7 +1361,6 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"body": {},
 						"url": {
 							"raw": "{{host}}/manage/category/set_category_name.do?categoryId=100031&categoryName=IPAD",
 							"host": [
@@ -1504,17 +1374,14 @@
 							"query": [
 								{
 									"key": "categoryId",
-									"value": "100031",
-									"equals": true
+									"value": "100031"
 								},
 								{
 									"key": "categoryName",
-									"value": "IPAD",
-									"equals": true
+									"value": "IPAD"
 								}
 							]
-						},
-						"description": ""
+						}
 					},
 					"response": []
 				},
@@ -1523,7 +1390,6 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"body": {},
 						"url": {
 							"raw": "{{host}}/manage/category/get_deep_category.do?categoryId=100001",
 							"host": [
@@ -1537,12 +1403,10 @@
 							"query": [
 								{
 									"key": "categoryId",
-									"value": "100001",
-									"equals": true
+									"value": "100001"
 								}
 							]
-						},
-						"description": ""
+						}
 					},
 					"response": []
 				}
@@ -1550,14 +1414,12 @@
 		},
 		{
 			"name": "后台-订单接口",
-			"description": "",
 			"item": [
 				{
 					"name": "获取订单列表",
 					"request": {
 						"method": "GET",
 						"header": [],
-						"body": {},
 						"url": {
 							"raw": "{{host}}/manage/order/list.do",
 							"host": [
@@ -1568,8 +1430,7 @@
 								"order",
 								"list.do"
 							]
-						},
-						"description": ""
+						}
 					},
 					"response": []
 				},
@@ -1578,7 +1439,6 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"body": {},
 						"url": {
 							"raw": "{{host}}/manage/order/search.do?orderNo=1558191391465",
 							"host": [
@@ -1592,12 +1452,10 @@
 							"query": [
 								{
 									"key": "orderNo",
-									"value": "1558191391465",
-									"equals": true
+									"value": "1558191391465"
 								}
 							]
-						},
-						"description": ""
+						}
 					},
 					"response": []
 				},
@@ -1606,7 +1464,6 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"body": {},
 						"url": {
 							"raw": "{{host}}/manage/order/detail.do?orderNo=1558191391465",
 							"host": [
@@ -1620,12 +1477,10 @@
 							"query": [
 								{
 									"key": "orderNo",
-									"value": "1558191391465",
-									"equals": true
+									"value": "1558191391465"
 								}
 							]
-						},
-						"description": ""
+						}
 					},
 					"response": []
 				},
@@ -1634,7 +1489,6 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"body": {},
 						"url": {
 							"raw": "{{host}}/manage/order/send_goods.do?orderNo=1558191391465",
 							"host": [
@@ -1648,12 +1502,94 @@
 							"query": [
 								{
 									"key": "orderNo",
-									"value": "1558191391465",
-									"equals": true
+									"value": "1558191391465"
 								}
 							]
-						},
-						"description": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "按支付状态查询",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/manage/order/searchstatus.do?status=20",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"manage",
+								"order",
+								"searchstatus.do"
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "10",
+									"disabled": true
+								},
+								{
+									"key": "status",
+									"value": "20"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "按订单号取消订单",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/manage/order/cancel.do?orderNo=1491753014256",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"manage",
+								"order",
+								"cancel.do"
+							],
+							"query": [
+								{
+									"key": "orderNo",
+									"value": "1491753014256"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "修改用户订单总价",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/manage/order/update.do?orderNo=1491753014256&payment=1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"manage",
+								"order",
+								"update.do"
+							],
+							"query": [
+								{
+									"key": "orderNo",
+									"value": "1491753014256"
+								},
+								{
+									"key": "payment",
+									"value": "1"
+								}
+							]
+						}
 					},
 					"response": []
 				}
