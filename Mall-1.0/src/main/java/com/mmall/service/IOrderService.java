@@ -31,10 +31,12 @@ public interface IOrderService {
     //BACKEND
     ServerResponse<PageInfo> manageList(int pageNum, int pageSize);
 
+
     ServerResponse<OrderVo> manageDetail(Long orderNo);
 
     ServerResponse<PageInfo> manageSearch(Long orderNo, int pageNum, int pageSize);
   ServerResponse<PageInfo> manageSearchs(int status, int pageNum, int pageSize);
+  ServerResponse<String> manageSearchs20(int status);
     ServerResponse<PageInfo> managedelete(Long orderNo, int pageNum, int pageSize);
     //ServerResponse<PageInfo> manageupdatep(Long orderNo, int pageNum, int pageSize)
 

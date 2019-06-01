@@ -193,4 +193,10 @@
     <include refid="Base_Column_List"></include>
    from mmall_user
   </select>
+  <select id="selectUserByrole" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List"></include>
+    from mmall_user
+    where role=#{role}
+  </select>
 </mapper>

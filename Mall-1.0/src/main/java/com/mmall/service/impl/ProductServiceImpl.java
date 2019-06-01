@@ -185,6 +185,14 @@ public class ProductServiceImpl implements IProductService {
         return ServerResponse.createBySuccess(pageInfo);
 
     }
+    @Override
+    public ServerResponse<String> searchStock(){
+
+        List<Product> p1 = productMapper.selectList();
+        List<Product> p2 = productMapper.selectByStock();
+
+        return ServerResponse.createBySuccess("当前商品有"+p1.size()+"其中库存为0的有"+p2.size());
+    }
 
 
     private ProductDetailVo assemableProductVo(Product product) {

@@ -211,4 +211,10 @@
         </foreach>
     </if>
   </select>
+  <select id="selectByStock" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select
+    <include refid="Base_Column_List" />
+    from mmall_product
+    where status &lt;= 0
+  </select>
 </mapper>

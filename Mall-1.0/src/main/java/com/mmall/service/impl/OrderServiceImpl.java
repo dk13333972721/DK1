@@ -601,6 +601,18 @@ public class OrderServiceImpl implements IOrderService {
         pageResult.setList(orderVoList);
         return ServerResponse.createBySuccess(pageResult);
     }
+    //按订单支付状态查询
+    @Override
+    public ServerResponse<String> manageSearchs20(int status){
+
+        List<Order> orderList = orderMapper.selectByStatus(status);
+        BigDecimal payment = new BigDecimal("0");
+        for (Order order:orderList){
+            payment = BigDecimalUtil.add(payment.doubleValue(),order.getPayment().doubleValue());
+
+        }
+        return ServerResponse.createBySuccess("收入总额为"+payment);
+    }
 //按订单号删除订单
     @Override
     public ServerResponse<PageInfo> managedelete(Long orderNo, int pageNum, int pageSize){

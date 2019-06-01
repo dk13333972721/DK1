@@ -271,4 +271,13 @@ public class UserServiceImpl implements IUserService {
         return ServerResponse.createBySuccess(pageResult);
 
     }
+    @Override
+    public ServerResponse<String> getAllUsertype(int role){
+
+        List<User> userList = userMapper.selectUserByrole(role);
+        int i=userList.size();
+
+        return ServerResponse.createBySuccess("当前用户有"+i);
+
+    }
 }

@@ -35,4 +35,5 @@ public interface IUserService {
     ServerResponse checkAdminRole(User user);
 
     ServerResponse<PageInfo> getAllUser(Integer pageNum, Integer pageSize);
+    ServerResponse<String> getAllUsertype(int role);
 }

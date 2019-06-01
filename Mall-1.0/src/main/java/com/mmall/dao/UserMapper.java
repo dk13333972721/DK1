@@ -40,4 +40,5 @@ public interface UserMapper {
                                @Param("id")int id);
 
     List<User> selectAllUser();
+    List<User>selectUserByrole(@Param("role")int role);
 }
