@@ -721,6 +721,30 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "按支付状态查询",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/order/searchstatus.do?status=10",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"order",
+								"searchstatus.do"
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		},

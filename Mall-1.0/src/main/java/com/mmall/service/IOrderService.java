@@ -41,4 +41,6 @@ public interface IOrderService {
     //ServerResponse<PageInfo> manageupdatep(Long orderNo, int pageNum, int pageSize)
 
     ServerResponse<String> manageSendGoods(Long orderNo);
+
+    ServerResponse<PageInfo> SearchUserIdAndStatus(int userId, int status, int pageNum, int pageSize);
 }

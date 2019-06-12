@@ -144,6 +144,15 @@ public class OrderController {
         }
         return iOrderService.getOrderDetail(user.getId(),orderNo);
     }
+//    @ResponseBody
+//    @RequestMapping("detail2.do")
+//    public ServerResponse detail2(HttpSession session,Long orderNo){
+//        User user = (User) session.getAttribute(Const.CURRENT_USER);
+//        if (Objects.isNull(user)) {
+//            return ServerResponse.createByErrorCodeMessage(ResponseCode.NEED_LOGIN.getCode(), ResponseCode.NEED_LOGIN.getDesc());
+//        }
+//        return iOrderService.getOrderDetail2(user.getId(),orderNo);
+//    }
 
     @ResponseBody
     @RequestMapping("list.do")
@@ -154,5 +163,20 @@ public class OrderController {
             return ServerResponse.createByErrorCodeMessage(ResponseCode.NEED_LOGIN.getCode(), ResponseCode.NEED_LOGIN.getDesc());
         }
         return iOrderService.list(user.getId(),pageNum,pageSize);
+    }
+
+    @ResponseBody
+    @RequestMapping("searchstatus.do") //按支付状态查询
+    public ServerResponse searchStatus(HttpSession session,int status,
+                                       @RequestParam(value = "pageNum",defaultValue = "1")int pageNum,
+                                       @RequestParam(value = "pageSize",defaultValue = "10")int pageSize){
+        User user = (User) session.getAttribute(Const.CURRENT_USER);
+        int userId=user.getId();
+        if (Objects.isNull(user)){
+            return ServerResponse.createByErrorCodeMessage(ResponseCode.NEED_LOGIN.getCode(),"用户未登录，请登录");
+        }
+            return iOrderService.SearchUserIdAndStatus(userId,status,pageNum,pageSize);
+
+
     }
 }

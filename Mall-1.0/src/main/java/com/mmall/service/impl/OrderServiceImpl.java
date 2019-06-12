@@ -134,6 +134,8 @@ public class OrderServiceImpl implements IOrderService {
             OrderItemVo orderItemVo = assambleOrderItemVo(orderItem);
             orderItemVoList.add(orderItemVo);
         }
+        //补充
+        orderVo.setOrderItemVoList(orderItemVoList);
         return orderVo;
     }
 
@@ -148,6 +150,19 @@ public class OrderServiceImpl implements IOrderService {
         orderItemVo.setProductName(orderItem.getProductName());
         orderItemVo.setProductImage(orderItem.getProductImage());
         orderItemVo.setCurrentUnitPrice(orderItem.getCurrentUnitPrice());
+        orderItemVo.setTotalPrice(orderItem.getTotalPrice());
+        orderItemVo.setCreateTime(DateTimeUtil.dateToStr(orderItem.getCreateTime()));
+        return orderItemVo;
+    }
+    private OrderItemVo assambleOrderItemVo1(OrderItem orderItem){
+
+        OrderItemVo orderItemVo = new OrderItemVo();
+        orderItemVo.setOrderNo(orderItem.getOrderNo());
+        orderItemVo.setProductId(orderItem.getProductId());
+        orderItemVo.setProductName(orderItem.getProductName());
+        orderItemVo.setProductImage(orderItem.getProductImage());
+        orderItemVo.setCurrentUnitPrice(orderItem.getCurrentUnitPrice());
+        orderItemVo.setQuatity(new BigDecimal(orderItem.getQuantity()));
         orderItemVo.setTotalPrice(orderItem.getTotalPrice());
         orderItemVo.setCreateTime(DateTimeUtil.dateToStr(orderItem.getCreateTime()));
         return orderItemVo;
@@ -499,6 +514,16 @@ public class OrderServiceImpl implements IOrderService {
         OrderVo orderVo = assambleOrderVo(order,orderItemList);
         return ServerResponse.createBySuccess(orderVo);
     }
+//    @Override
+//    public ServerResponse<OrderVo> getOrderDetail2(Integer userId, Long orderNo){
+//        Order order = orderMapper.selectByOrderNoAndUserId(orderNo,userId);
+//        if (Objects.isNull(order)){
+//            return ServerResponse.createByError("该用户下没有改订单");
+//        }
+//        List<OrderItem> orderItemList = orderItemMapper.selectOrderItemsByOrderNoAndUserId(orderNo,userId);
+//        OrderItemVo orderItemVo = assambleOrderItemVo1(orderItemList);
+//        return ServerResponse.createBySuccess(orderVo);
+//    }
 
     /**
      * 列出所有的订单
@@ -590,12 +615,27 @@ public class OrderServiceImpl implements IOrderService {
         }
         return ServerResponse.createByError("订单不存在");
     }
-
+    //按订单支付状态查询
+    @Override
+    public ServerResponse<PageInfo> SearchUserIdAndStatus(int userId,int status, int pageNum, int pageSize){
+        PageHelper.startPage(pageNum,pageSize);
+        List<Order> orderList = orderMapper.selectByUserIdAndStatus(userId,status);
+        if (orderList.isEmpty()){
+            return ServerResponse.createByError("订单不存在");
+        }
+        List<OrderVo> orderVoList = assambleOrderVoList(orderList,null);
+        PageInfo pageResult = new PageInfo(orderVoList);
+        pageResult.setList(orderVoList);
+        return ServerResponse.createBySuccess(pageResult);
+    }
     //按订单支付状态查询
     @Override
     public ServerResponse<PageInfo> manageSearchs(int status, int pageNum, int pageSize){
         PageHelper.startPage(pageNum,pageSize);
         List<Order> orderList = orderMapper.selectByStatus(status);
+        if (orderList.isEmpty()){
+            return ServerResponse.createByError("订单不存在");
+        }
         List<OrderVo> orderVoList = assambleOrderVoList(orderList,null);
         PageInfo pageResult = new PageInfo(orderVoList);
         pageResult.setList(orderVoList);
@@ -606,6 +646,9 @@ public class OrderServiceImpl implements IOrderService {
     public ServerResponse<String> manageSearchs20(int status){
 
         List<Order> orderList = orderMapper.selectByStatus(status);
+        if (orderList.isEmpty()){
+            return ServerResponse.createByError("订单不存在");
+        }
         BigDecimal payment = new BigDecimal("0");
         for (Order order:orderList){
             payment = BigDecimalUtil.add(payment.doubleValue(),order.getPayment().doubleValue());
